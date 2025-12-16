@@ -11,7 +11,14 @@ export const CartProvider = ({ children }) => {
 
   const addItem = (item) => {
     if (exists(item.id)) {
-      alert("El item ya existe en el carrito");
+      // Actualizar cantidad si ya existe
+      const updatedCart = cart.map((prod) =>
+        prod.id === item.id
+          ? { ...prod, quantity: (prod.quantity || 1) + item.quantity }
+          : prod
+      );
+      setCart(updatedCart);
+      alert(`Se agregó más cantidad de ${item.name} al carrito`);
       return;
     }
     setCart([...cart, item]);

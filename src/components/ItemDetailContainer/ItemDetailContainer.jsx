@@ -7,7 +7,7 @@ export const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch("./data/products.json")
+    fetch(`${import.meta.env.BASE_URL}data/products.json`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Tenemos un problema en los productos");
