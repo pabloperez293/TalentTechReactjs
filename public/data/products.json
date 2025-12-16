@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "p001",
+      "imageUrl": "https://picsum.photos/300?random=1",
+      "name": "Manzana Roja Premium",
+      "price": 2.45,
+      "description": "Manzanas frescas seleccionadas de cultivo ecológico, ideales para postres o jugos naturales."
+    },
+    {
+      "id": "p002",
+      "imageUrl": "https://picsum.photos/300?random=2",
+      "name": "Brócoli Orgánico",
+      "price": 1.75,
+      "description": "Brócoli verde de huerto local, rico en fibra y vitaminas, perfecto para cocinar al vapor o salteado."
+    },
+    {
+      "id": "p003",
+      "imageUrl": "https://picsum.photos/300?random=3",
+      "name": "Pimienta Negra Molida",
+      "price": 3.20,
+      "description": "Especia natural molida finamente, proveniente de granos seleccionados para un sabor intenso."
+    },
+    {
+      "id": "p004",
+      "imageUrl": "https://picsum.photos/300?random=4",
+      "name": "Mix de Verduras Congeladas",
+      "price": 4.10,
+      "description": "Mezcla lista para cocinar: zanahoria, guisante, maíz y judías verdes. Ideal para comidas rápidas."
+    },
+    {
+      "id": "p005",
+      "imageUrl": "https://picsum.photos/300?random=5",
+      "name": "Plátano Canario",
+      "price": 1.90,
+      "description": "Plátanos dulces y cremosos de cultivo sostenible en las Islas Canarias."
+    },
+    {
+      "id": "p006",
+      "imageUrl": "https://picsum.photos/300?random=6",
+      "name": "Filete de Merluza Congelado",
+      "price": 6.50,
+      "description": "Filetes de merluza de alta calidad, ultracongelados para conservar su sabor y frescura."
+    }
+  ]
+}

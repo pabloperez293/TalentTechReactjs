@@ -1,0 +1,66 @@
+/* ========== GRID DE PRODUCTOS ==========  */
+.item-list-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-items: center;
+  place-items: center;
+}
+
+.item-list-grid a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== RESPONSIVE GRID ==========  */
+
+/* Small - Celulares (360px - 640px) */
+@media (min-width: 360px) and (max-width: 640px) {
+  .item-list-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+}
+
+/* Medium - Tablets (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .item-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Large - Desktops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .item-list-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    padding: 2rem;
+  }
+}
+
+/* Extra Large - Pantallas muy grandes (> 1440px) */
+@media (min-width: 1441px) {
+  .item-list-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+}
+
+/* ========== MENSAJE DE VACÍO ==========  */
+.item-list-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+  font-size: clamp(1rem, 3vw, 1.125rem);
+  grid-column: 1 / -1;
+}
