@@ -7,19 +7,18 @@ export const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch("/data/products.json")
+    fetch("./data/products.json")
       .then((res) => {
         if (!res.ok) {
-          throw new Error("Tenemos un problema en los prodcutos");
+          throw new Error("Tenemos un problema en los productos");
         }
         return res.json();
       })
       .then((data) => {
-        const found = data.find((prod) => prod.id === id);
+        const products = Array.isArray(data) ? data : (data.products || []);
+        const found = products.find((prod) => prod.id === id);
         if (found) {
           setDetail(found);
-        } else {
-          throw new Error("Producto no encontrado");
         }
       })
       .catch(() => {});

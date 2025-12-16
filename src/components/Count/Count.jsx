@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Count.css";
 
-export const Count = ({ btnText, onConfirm }) => {
+export const Count = ({ btnText = "Confirmar", onConfirm }) => {
     const [ count, setCount ] = useState(0);
 
     const increment = () => {

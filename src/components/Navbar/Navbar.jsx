@@ -22,10 +22,12 @@ const Navbar = () => {
           <Link to="/category/minorista">Minorista</Link>
         </li>
 
-        <li><Link>Carrito</Link>
-        {getTotalItems() > 0 && (
-          <span className="cart-count">{getTotalItems()}</span>
-        )} </li>
+        <li>
+          <Link to="/carrito">Carrito</Link>
+          {getTotalItems() > 0 && (
+            <span className="cart-count">{getTotalItems()}</span>
+          )}
+        </li>
       </ul>
     </nav>
   );

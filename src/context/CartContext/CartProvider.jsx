@@ -23,9 +23,21 @@ export const CartProvider = ({ children }) => {
   };
 
   const getTotalItems = () => {
-    if (cart.length) {
-      return cart.length;
-    }
+    return cart.length;
+  };
+
+  const deleteItem = (id) => {
+    const updatedCart = cart.filter((item) => item.id !== id);
+    setCart(updatedCart);
+  };
+
+  const total = () => {
+    return cart.reduce((acc, item) => acc + (item.price * (item.quantity || 1)), 0);
+  };
+
+  const checkout = () => {
+    alert("Compra finalizada");
+    setCart([]);
   };
 
   const values = {
@@ -33,6 +45,9 @@ export const CartProvider = ({ children }) => {
     addItem,
     getTotalItems,
     clearCart,
+    deleteItem,
+    total,
+    checkout,
   };
 
   return <CartContext.Provider value={values}>

@@ -8,11 +8,17 @@ export const ItemListContainer = () => {
     fetch("./data/products.json")
       .then((res) => {
         if (!res.ok) {
-          throw new Error("Tenemos un problema en los prodcutos");
+          throw new Error("Tenemos un problema en los productos");
         }
         return res.json();
       })
-      .then((data) => setProductos(data.products))
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setProductos(data);
+        } else if (data.products && Array.isArray(data.products)) {
+          setProductos(data.products);
+        }
+      })
       .catch((error) => console.log(error));
   }, []);
 
