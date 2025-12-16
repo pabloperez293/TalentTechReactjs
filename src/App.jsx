@@ -11,7 +11,7 @@ import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
 
 function App() {
   return (
-    <BrowserRouter basename="/ProductosNumero4">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <CartProvider>
         <Routes>
           <Route element={<MainLayout />}>
