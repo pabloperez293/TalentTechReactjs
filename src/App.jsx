@@ -8,6 +8,7 @@ import { AdminLayout } from "./Layouts/AdminLayout";
 import { Login } from "./components/Login/Login";
 import { Cart } from "./components/Cart/Cart";
 import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
+import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer/ProductFormContainer";
 
 function App() {
   return (
@@ -23,6 +24,15 @@ function App() {
 
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<Login />} />
+
+            <Route
+              path="alta-productos"
+              element={
+                <RutaProtegida>
+                  <ProductFormContainer />
+                </RutaProtegida>
+              }
+            />
           </Route>
         </Routes>
       </CartProvider>
